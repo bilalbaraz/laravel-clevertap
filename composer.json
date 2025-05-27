@@ -1,0 +1,24 @@
+{
+    "name": "bilalbaraz/laravel-clevertap",
+    "type": "library",
+    "description": "CleverTap for Laravel",
+    "keywords": ["clevertap","laravel"],
+    "homepage": "https://github.com/bilalbaraz/laravel-clevertap",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bilal Baraz",
+            "email": "bilalbaraz@windowslive.com",
+            "homepage": "https://github.com/bilalbaraz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "BilalBaraz\\LaravelCleverTap\\": "src/"
+        }
+    }
+}
