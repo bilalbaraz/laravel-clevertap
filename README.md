@@ -29,6 +29,32 @@ T.B.D.
 
 T.B.D.
 
+## API Implementation Roadmap
+
+The following CleverTap APIs will be implemented in this package:
+
+- [ ] Catalog API
+- [ ] Create Campaign
+- [ ] Custom List API
+- [ ] Delete User Profile
+- [ ] Demerge User Profile
+- [ ] External Trigger API
+- [ ] Get Campaign Report
+- [ ] Get Campaigns
+- [ ] Get Event Count
+- [ ] Get Events
+- [ ] Get Message Reports
+- [ ] Get Profile Count
+- [ ] Get User Profiles
+- [ ] Raise a Bulletin
+- [ ] Real-Time Counts
+- [ ] Stop Scheduled Campaign
+- [ ] Top Property Counts
+- [ ] Trends
+- [ ] Upload Device Tokens
+- [ ] Upload Events
+- [ ] Upload User Profiles
+
 ## License
 
 The MIT License (MIT). Please see [License](LICENSE.md) for more information.
