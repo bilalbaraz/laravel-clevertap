@@ -72,6 +72,46 @@ class CleverTap
     }
 
     /**
+     * Get message reports
+     *
+     * @param array $params Query parameters
+     * @return array
+     */
+    public function getMessageReports(array $params = [])
+    {
+        if (empty($params['from']) || empty($params['to'])) {
+            throw new \InvalidArgumentException('From and to dates are required for message reports.');
+        }
+
+        $queryParams = [
+            'from' => $params['from'],
+            'to' => $params['to'],
+        ];
+
+        if (!empty($params['channel'])) {
+            $channels = is_array($params['channel']) ? $params['channel'] : [$params['channel']];
+
+            $validChannels = array_intersect($channels, [
+                'push',
+                'email',
+                'sms',
+                'browser',
+                'audiences',
+                'inapp',
+                'webhooks',
+                'web_pop_up',
+                'web_exit_intent',
+                'web_native_display',
+                'web_inbox',
+            ]);
+
+            $queryParams['channel'] = $validChannels;
+        }
+
+        return $this->sendRequest('/1/message/report.json', $queryParams, 'POST');
+    }
+
+    /**
      * Send API request
      *
      * @param string $endpoint API endpoint
@@ -82,9 +122,15 @@ class CleverTap
     protected function sendRequest($endpoint, array $data, $method = 'POST')
     {
         try {
-            $response = $this->client->request($method, $endpoint, [
-                'json' => $data
-            ]);
+            $options = [];
+
+            if ($method === 'GET') {
+                $options['query'] = $data;
+            } else {
+                $options['json'] = $data;
+            }
+
+            $response = $this->client->request($method, $endpoint, $options);
 
             $body = $response->getBody()->getContents();
             return json_decode($body, true) ?? [];
