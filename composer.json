@@ -20,5 +20,15 @@
         "psr-4": {
             "BilalBaraz\\LaravelCleverTap\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BilalBaraz\\LaravelCleverTap\\LaravelCleverTapServiceProvider"
+            ],
+            "aliases": {
+                "CleverTap": "BilalBaraz\\LaravelCleverTap\\Facades\\CleverTap"
+            }
+        }
     }
 }
