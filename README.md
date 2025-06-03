@@ -1,4 +1,6 @@
-![Laravel CleverTap](./docs/laravel-clevertap.png)
+<p align="center">
+  <img src="./docs/laravel-clevertap.png" width="500" height="auto" alt="Laravel CleverTap">
+</p>
 
 # Laravel CleverTap
 
