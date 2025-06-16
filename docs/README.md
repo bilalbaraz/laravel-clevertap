@@ -40,7 +40,7 @@ T.B.D.
 The following CleverTap APIs will be implemented in this package:
 
 - [ ] Settings API
-- [-] Campaign APIs
+- [ ] Campaign APIs
   - [x] Create Campaign
   - [ ] Stop Scheduled Campaign
   - [ ] Get Campaign Reports
