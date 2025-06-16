@@ -39,14 +39,30 @@ T.B.D.
 
 The following CleverTap APIs will be implemented in this package:
 
-- [ ] Bulletins API
-- [ ] Campaign APIs
+- [ ] Settings API
+- [-] Campaign APIs
+  - [x] Create Campaign
+  - [ ] Stop Scheduled Campaign
+  - [ ] Get Campaign Reports
+  - [x] Get Campaigns
 - [ ] Catalog API
 - [ ] Custom List API
 - [ ] Event APIs
 - [ ] Profile APIs
+  - [ ] Get User Profiles
+  - [ ] Upload User Profiles
+  - [ ] Upload Device Tokens
+  - [ ] Get Profile Count
+  - [ ] Delete User Profile
+  - [ ] Demerge User Profile
+  - [ ] Subscribe
+  - [ ] Disassociate a Phone Number
+- [ ] Remote Config API
+  - [ ] Create/Define Variables
+  - [ ] Delete Variables
+  - [ ] Get Variables
 - [ ] Report APIs
-- [ ] Settings API
+- [ ] Bulletins API
 
 ## License
 
