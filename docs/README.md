@@ -21,7 +21,27 @@ composer require bilalbaraz/laravel-clevertap
 
 ## Configuration
 
-T.B.D.
+After installing the package, publish the configuration file using:
+
+```bash
+php artisan vendor:publish --provider="BilalBaraz\LaravelCleverTap\CleverTapServiceProvider"
+```
+
+This will create a `config/clevertap.php` file in your application. Configure your CleverTap credentials in this file:
+
+```php
+return [
+    'account_id' => env('CLEVERTAP_ACCOUNT_ID'),
+    'passcode' => env('CLEVERTAP_PASSCODE'),
+];
+```
+
+Then, add your CleverTap credentials to your `.env` file:
+
+```
+CLEVERTAP_ACCOUNT_ID=your-account-id
+CLEVERTAP_PASSCODE=your-passcode
+```
 
 ## Basic Usage
 
